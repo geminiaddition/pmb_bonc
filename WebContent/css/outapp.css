@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+.kpi-dir1 {
+    background-color: transparent;
+    background-image: url("../../../resources/libs/jstree/1.0-rc3/themes/classic/d.gif");
+    background-position: -2px 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 19px;
+    line-height: 19px;
+    vertical-align: middle;
+    width: 13px;
+    cursor:pointer;
+}
+.kpi-dir2 {
+    background-color: transparent;
+    background-image: url("../../../resources/libs/jstree/1.0-rc3/themes/classic/d.gif");
+    background-position: -2px 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 19px;x
+    line-height: 19px;
+    vertical-align: middle;
+    width: 13px;
+    cursor:pointer;
+}
+.kpi-dir-open {
+    background-position: -20px 0;
+}
+/* 表格样式2 */
+.b-table-1 {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	overflow-x: auto;
+}
+.b-table-1 thead tr{
+	height:30px;
+}
+.b-table-1 th,.b-table td {
+	line-height: 16px;
+	padding: 3px;
+}
+.b-table-1 th {
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 2px solid #1ab394;
+	font-size: 12px;
+	font-family: verdana, 宋体;
+	
+}
+.b-table-1 td a{
+	text-align: right;
+	font-size: 12px;
+	font-family: verdana, 宋体;
+	color:#000000;
+}
+.b-table-1 tbody tr td{
+	height:22px;
+	padding-top:2px;
+	border-bottom: 1px dotted #d8d8d8;
+}
+/* 样式grid0 */
+
+table.grid0 tbody tr:hover {
+    background-color: #DFEfFf;
+}
+
+/* 表格样式  b-table-1-1*/
+.b-table-1-1 {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	overflow-x: auto;
+}
+.b-table-1-1 thead tr{
+	height:30px;
+}
+.b-table-1-1 th,.b-table td {
+	line-height: 16px;
+	padding: 3px;
+	white-space:nowrap;
+}
+.b-table-1-1 th {
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 2px solid #1ab394;
+	font-size: 12px;
+	font-family: verdana, 宋体;
+}
+.b-table-1-1 td a{
+	text-align: right;
+	font-size: 12px;
+	font-family: verdana, 宋体;
+	color:#000000;
+}
+.b-table-1-1 tbody tr:hover {
+	
+}
+.b-table-1-1 tbody tr td{
+	height:22px;
+	padding-top:2px;
+	border-bottom: 1px dotted #d8d8d8;
+}
+/* 表格样式  b-table-1-2*/
+.b-table-1-2 {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	overflow-x: auto;
+}
+.b-table-1-2 thead tr{
+	height:30px;
+}
+.b-table-1-2 th,.b-table td {
+	line-height: 16px;
+	padding: 3px;
+	white-space:nowrap;
+}
+.b-table-1-2 th {
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 2px solid #1ab394;
+	font-size: 12px;
+	font-family: verdana, 宋体;
+}
+.b-table-1-2 td a{
+	text-align: right;
+	font-size: 12px;
+	font-family: verdana, 宋体;
+	color:#000000;
+}
+.b-table-1-2 tbody tr td{
+	height:22px;
+	padding-top:2px;
+	border-bottom: 1px dotted #d8d8d8;
+}
+
+<%--b-table-1表头对齐 下钻样式  --%>
+	.b-table-1 td.right{
+		text-align:left;
+	}
+	.b-table-1 td{
+		text-align:left;
+		font-family:verdana, 宋体;
+		font-size:12px;	
+	}
+	.b-table-1 thead tr{
+	height:16px;
+	}
+	.b-table-1 th,.b-table td {
+		line-height: 16px;
+		padding: 2px;
+		white-space:nowrap;
+	}
+<%--b-table-1-1表头对齐 下钻样式  --%>
+	.b-table-1-1 td.right{
+		text-align:left;
+	}
+	.b-table-1-1 td{
+		text-align:left;
+		font-family:verdana;
+		font-size:12px;	
+	}
+	.b-table-1-1 thead tr{
+	height:16px;
+	}
+	.b-table-1-1 th,.b-table td {
+		line-height: 16px;
+		padding: 2px;
+		white-space:nowrap;
+	}
+	<%--b-table-1-2表头对齐 下钻样式  --%>
+	.b-table-1-2 td.right{
+		text-align:left;
+	}
+	.b-table-1-2 td{
+		text-align:left;
+		font-family:verdana;
+		font-size:12px;	
+	}
+	.b-table-1-2 thead tr{
+	height:16px;
+	}
+	.b-table-1-2 th,.b-table td {
+		line-height: 16px;
+		padding: 2px;
+		white-space:nowrap;
+	}
+	.a44{
+	    color: black;
+	    cursor: pointer;
+	    font-size: 12px;
+	    outline: medium none;
+	    text-decoration: underline;	
+    }

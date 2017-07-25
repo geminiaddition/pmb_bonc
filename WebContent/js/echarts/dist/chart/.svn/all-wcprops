@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart
+END
+bar.js
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/bar.js
+END
+scatter.js
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/scatter.js
+END
+venn.js
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/venn.js
+END
+pie.js
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/pie.js
+END
+map.js
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/map.js
+END
+heatmap.js
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/heatmap.js
+END
+line.js
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/line.js
+END
+funnel.js
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/funnel.js
+END
+gauge.js
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/gauge.js
+END
+radar.js
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/radar.js
+END
+eventRiver.js
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/eventRiver.js
+END
+k.js
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/k.js
+END
+treemap.js
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/treemap.js
+END
+force.js
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/force.js
+END
+tree.js
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/tree.js
+END
+chord.js
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/dev/base/!svn/ver/94030/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/chord.js
+END
+wordCloud.js
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/chart/wordCloud.js
+END

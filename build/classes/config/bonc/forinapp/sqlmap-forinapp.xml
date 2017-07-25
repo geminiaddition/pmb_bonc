@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="forinapp">
+	<select id="dmjishi" resultType="sjjkbean">
+		select t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation='dm1'
+	</select>
+	<select id="dmjishi2" resultType="sjjkbean">
+		select t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation='dm2'
+	</select>
+	<select id="cun_yarm" resultType="forinappbean">
+		select
+		t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit "file_num_crit"
+		from LTZB.cl_301_yarn t
+	</select>
+	<select id="cunl_redis" resultType="redisbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.proxy_num "proxy_num",
+		t.group_num "group_num",
+		t.dashboard "dashboard",
+		t.storage_total_rate
+		"storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+		from LTZB.cl_301_redis t
+
+	</select>
+	<select id="cunl_redis2" resultType="redisbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.proxy_num "proxy_num",
+		t.group_num "group_num",
+		t.dashboard "dashboard",
+		t.storage_total_rate
+		"storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+		from LTZB.cl_324_redis t
+	</select>
+	<select id="cunl_kafka2" resultType="threekafkabean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.ss_network "ss_network",
+		t.storage_total_rate "storage_total_rate",
+		t.storage_total_warn
+		"storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+		from
+		LTZB.cl_324_kafka t
+	</select>
+	<select id="cunl_storm" resultType="stormbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.slot_num "slot_num",
+		t.executors_num "executors_num",
+		t.tasks_num "tasks_num"
+		from LTZB.cl_324_storm t
+	</select>
+	<select id="clpt" resultType="yarnnbean">
+		select t.scheduler_id
+		"scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity "absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = '存量平台'
+		order by t.scheduler_id
+	</select>
+	<select id="datalinedatacenter" resultType="todatalinebean">
+select substr(a.time, 7, 8) || '日' as "kpi_date",
+       a.count_num "KPI_VALUE_LEADER",
+       b.count_num "kpi_value"
+  from (select *
+          from (select *
+                  from (select time, max(count_num) count_num
+                          from (select substr(time, 0, 8) time, count_num
+                                  from LTZB.jingfen_pageview
+                                 where kpi_desc = '领导首页当日访问人数'
+                                 order by time desc)
+                         group by time
+                         order by time desc)
+                 where rownum &lt;= 7)
+         order by time) a
+  left join (select *
+               from (select *
+                       from (select time, max(count_num) count_num
+                               from (select substr(time, 0, 8) time, count_num
+                                       from LTZB.ldsy_pageview
+                                      where kpi_desc = '数据分析系统当日访问人数'
+                                      order by time desc)
+                              group by time
+                              order by time desc)
+                      where rownum &lt;= 7)
+              order by time) b
+    on a.time = b.time
+
+		
+	</select>
+	<select id="datalinedowncenter" resultType="todatalinedownbean">
+		select a.count_num
+		"fenxi",b.count_num "jingfen" from
+
+		(select time,count_num
+		from (select time, count_num
+		from LTZB.ldsy_pageview
+		where kpi_desc = '数据分析系统当前在线人数'
+		order by time desc)
+		where rownum &lt;= 1) a
+		left join
+		(select time, count_num
+		from (select time, count_num
+		from LTZB.jingfen_pageview
+		where kpi_desc = '领导首页当前在线人数'
+		order by time desc)
+		where rownum &lt;= 1) b
+		on a.time=b.time
+
+	</select>
+	<select id="datalinedowntwo" resultType="todatalinetowbean">
+		select 
+       mem_used "mem_used",
+       mem_war "mem_war",
+       mem_cri "mem_cri",
+       ping_stat "ping_stat",
+       root_used_rate "root_used_rate"
+  from (select *
+          from (select t.*,rowid
+                  from zb_man.cpu_messages t
+                 where projects = '领导首页'
+                 order by time desc)
+         where rownum &lt;= 1
+         order by projects desc)
+
+	</select>
+
+
+</mapper>

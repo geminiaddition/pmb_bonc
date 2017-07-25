@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="datacenter">
+	<select id="getfour" resultType="fouroneninebean">
+		select t.total_nodes
+		"total_nodes",
+		t.cunchu_total "cunchu_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.one_rate "one_rate",
+		t.one_warn "one_warn",
+		t.one_crit "one_crit",
+		t.twoo "twoo",
+		t.threeo
+		"threeo",
+		t.four "four",
+		t.active_nodes "active_nodes"
+		from four19_detail
+		t
+
+	</select>
+	<select id="getthreehbase" resultType="threehbasebean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate "storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.cbss_hbase t
+
+	</select>
+	<select id="getthreestorm" resultType="threestormbean">
+		select TOTAL_NODES
+		"total_nodes",
+		STORAGE_TOTAL "storage_total",
+		MEM_RATE "mem_rate",
+		MEM_WARN "mem_warn",
+		MEM_CRIT "mem_crit",
+		CPU_RATE "cpu_rate",
+		CPU_WARN
+		"cpu_wran",
+		CPU_CRIT "cpu_crit",
+		ACTIVE_NODES "active_nodes",
+		slot_num
+		"slot_num",
+		executors_num "executors_num",
+		tasks_num "tasks_num"
+		from
+		LTZB.cbss_storm t
+	</select>
+	<select id="getthreekafka" resultType="threekafkabean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.ss_network "ss_network",
+		t.storage_total_rate "storage_total_rate",
+		t.storage_total_warn
+		"storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+		from
+		LTZB.cbss_kafka t
+
+	</select>
+	<select id="getthreeredis" resultType="threeredisbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.proxy_num "proxy_num",
+		t.group_num "group_num",
+		t.dashboard "dashboard",
+		t.storage_total_rate
+		"storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+		from LTZB.cbss_redis t
+
+	</select>
+	<select id="yth_yarn" resultType="yarmbean">
+		select
+		t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.yth_yarn t
+
+	</select>
+	<select id="cbss_hbase" resultType="hbasebean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate "storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.yth_hbase t
+	</select>
+	<select id="bss_cjzh" resultType="yarmbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.bss_cjzh t
+	</select>
+	<select id="ipsuyuan" resultType="hbasebean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate "storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.IPsuyuan_hbase t
+	</select>
+	<select id="lsxdbf" resultType="lsxdbfbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes"
+		from LTZB.lsxdbf_mpp t
+	</select>
+	<select id="kafka" resultType="kafkabean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+
+		t.storage_total_rate "storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit
+		"storage_total_crit",
+		t.ss_network "ss_network"
+		from LTZB.sjfw_kafka t
+	</select>
+	<select id="redis" resultType="redisbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.proxy_num "proxy_num",
+		t.group_num "group_num",
+		t.dashboard "dashboard",
+		t.storage_total_rate
+		"storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+		from ltzb.sjfw_redis t
+	</select>
+	<select id="xinling" resultType="yarmbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.xl_yarn t
+	</select>
+	<select id="yzwk_hbase" resultType="hbasebean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate "storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.ocfc_hbase t
+	</select>
+	<select id="yzwk_kafka" resultType="kafkabean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+
+		t.storage_total_rate "storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit
+		"storage_total_crit",
+		t.ss_network "ss_network"
+		from LTZB.ocfc_kafka t
+	</select>
+	<select id="yzwk_storm" resultType="stormbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.slot_num "slot_num",
+		t.executors_num "executors_num",
+		t.tasks_num "tasks_num"
+		from LTZB.ocfc_storm t
+	</select>
+	<select id="yzwk_redis" resultType="redisbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.proxy_num "proxy_num",
+		t.group_num "group_num",
+		t.dashboard "dashboard",
+		t.storage_total_rate
+		"storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+		from LTZB.ocfc_redis t
+	</select>
+	<select id="llcx" resultType="hbasebean">
+		select t.total_nodes "total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn
+		"mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn
+		"cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes "active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate
+		"storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.dataflow_hbase t
+	</select>
+	<select id="byu_yarn" resultType="yarmbean">
+		select
+		t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.byu_yarn t
+
+	</select>
+	<select id="zxjg_yarn" resultType="yarmbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.zyjg_yarn t
+	</select>
+	<select id="yybf" resultType="yybsbean">
+		select t.total_nodes "total_nodes",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.process_nun "process_nun"
+		from LTZB.yingyong_4m1 t
+	</select>
+	<select id="sjjk" resultType="sjjkbean">
+		select t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation='数据管控'
+	</select>
+	<select id="fwk" resultType="sjjkbean">
+		select t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation='服务库'
+	</select>
+	<select id="yjhj" resultType="sjjkbean">
+		select t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation='应急环境'
+	</select>
+	<select id="zxjg" resultType="sjjkbean">
+		select t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation='纵向加工'
+	</select>
+	<select id="cbjg" resultType="sjjkbean">
+		select t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation='cb加工'
+	</select>
+	<select id="getbssgetall" resultType="yarnnbean">
+		select t.scheduler_id
+		"scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity "absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = 'bss采集整合集群'
+		order by
+		t.scheduler_id
+
+	</select>
+
+
+
+
+	<select id="getfirstyarn" resultType="yarnnbean">
+		select t.scheduler_id "scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity "absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = '一体化集群'
+		order by t.scheduler_id
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<select id="ytotal" resultType="ytotalbean">
+		select t.total_num "total_num",
+		t.sly_jf_num "sly_jf_num",
+		t.sm1_jf_num "sm1_jf_num",
+		t.ses_jf_num
+		"ses_jf_num",
+		t.syj_jf_num "syj_jf_num"
+		from ltzb.ptjk_total t
+	</select>
+	<select id="etotal" resultType="etotalbean">
+		select t.total_num "total_num",
+		t.jf_num "jf_num", t.cl_num "cl_num"
+		from ltzb.dnyy_total t
+	</select>
+	<select id="stotal" resultType="stotalbean">
+		select t.total_num "total_num",
+		t.zx_num "zx_num",
+		t.woyx_num "woyx_num",
+		t.open_num "open_num",
+		t.ks_num "ks_num",
+		t.dmp_num "dmp_num"
+		from ltzb.dyyy_total t
+	</select>
+	<select id="cbjgjq" resultType="yarnnbean">
+		select t.scheduler_id
+		"scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity "absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = 'cb加工集群'
+		order by t.scheduler_id
+	</select>
+	<select id="zxjgjq" resultType="yarnnbean">
+		select t.scheduler_id
+		"scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity "absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = '纵向加工集群'
+		order by t.scheduler_id
+	</select>
+	<select id="xlxdjq" resultType="yarnnbean">
+		select t.scheduler_id
+		"scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity "absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = '信令西电集群'
+		order by t.scheduler_id
+	</select>
+
+
+</mapper>

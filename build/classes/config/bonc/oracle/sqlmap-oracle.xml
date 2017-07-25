@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oracleinfo">
+
+
+	<select id="dw1" resultType="oraclebean">
+		select * from
+		eam.plat_oracle_detail where operation ='数据仓库-DW1'
+
+	</select>
+	<select id="dw2" resultType="oraclebean">
+		select * from
+		eam.plat_oracle_detail where operation ='数据仓库-DW2'
+
+	</select>
+	<select id="dw3" resultType="oraclebean">
+
+		select * from eam.plat_oracle_detail where operation ='数据仓库-DW3'
+	</select>
+	<select id="dw4" resultType="oraclebean">
+		select * from
+		eam.plat_oracle_detail where operation ='数据仓库-DW4'
+
+	</select>
+	<select id="dwe1" resultType="oraclebean">
+		select * from eam.plat_oracle_detail where operation ='数据仓库-DWE1'
+
+
+	</select>
+	<select id="dwe2" resultType="oraclebean">
+		select * from
+		eam.plat_oracle_detail where operation ='数据仓库-DWE2'
+
+	</select>
+	<select id="db1" resultType="oraclebean">
+		select * from
+		eam.plat_oracle_detail where operation ='数据集市-DB01'
+
+	</select>
+	<select id="db2" resultType="oraclebean">
+
+		select * from eam.plat_oracle_detail where operation ='数据集市-DB02'
+	</select>
+	<select id="12c1" resultType="oraclebean">
+		select * from
+		eam.plat_oracle_detail where operation ='12C综合库-ODBA1'
+
+	</select>
+	<select id="12c2" resultType="oraclebean">
+		select * from
+		eam.plat_oracle_detail where operation ='12C综合库-ODBA2'
+
+	</select>
+
+
+
+
+</mapper>  

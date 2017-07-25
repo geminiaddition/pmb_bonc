@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="datasend">
+
+
+	<select id="caixin" resultType="datasendbean">
+		select t.index_id "index_id",
+		t.index_name "index_name",
+		t.index_value "index_value" from echarts.zb_dpm_index_data_06 t
+
+		where t.index_id in('P060101',
+		'P060102',
+		'P060103',
+		'P060104',
+		'P060105',
+		'P060106',
+		'P060107',
+		'P060108',
+		'P060109',
+		'P060110')
+
+	</select>
+	<select id="ribao" resultType="datasendbean">
+		select t.index_id "index_id",
+		t.index_name "index_name",
+		t.index_value "index_value"
+		from echarts.zb_dpm_index_data_06 t
+		where t.index_id in ('P060301',
+		'P060302',
+		'P060303',
+		'P060304',
+		'P060305',
+		'P060306',
+		'P060307',
+		'P060308',
+		'P060309',
+		'P060310')
+
+	</select>
+	<select id="youjian" resultType="datasendbean">
+		select t.index_id "index_id",
+		t.index_name "index_name",
+		t.index_value "index_value"
+		from echarts.zb_dpm_index_data_06 t
+		where t.index_id in ('P060201', 'P060202', 'P060203', 'P060204')
+
+	</select>
+	<select id="yemian" resultType="datasendbean">
+		select t.index_id "index_id",
+		t.index_name "index_name",
+		t.index_value "index_value"
+		from echarts.zb_dpm_index_data_06 t
+		where t.index_id in ('P060311','P060312','P060313')
+
+	</select>
+</mapper>

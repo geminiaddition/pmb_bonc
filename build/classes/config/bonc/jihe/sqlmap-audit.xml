@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="auditinfo">
+
+
+	<select id="getaudit" resultType="auditbean">
+		select check_rule_num   "check_rule_num",
+       problem_num      "problem_num",
+       answer_prov      "answer_prov",
+       etl_task_num     "etl_task_num",
+       etl_task_finish  "etl_task_finish",
+       etl_task_err     "etl_task_err",
+       unanswer_prov    "unanswer_prov",
+       examine_prov_t_3 "examine_prov_t_3"
+  from echarts.zb_dpm_data_quality_title
+
+	</select>
+	<select id="getauditdatil" resultType="auditdatilbean">
+	select to_char(CHECK_TYPE)     "check_type",
+       CHECK_RULE_NUM "check_rule_num",
+       PROBLEM_NUM    "problem_num",
+       ANSWER_PROV    "answer_prov",
+       UNANSWER_PROV  "unanswer_prov"
+  from echarts.zb_dpm_data_quality_overview
+	</select>
+
+
+
+
+</mapper>  

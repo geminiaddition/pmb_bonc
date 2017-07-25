@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hostmo">
+	<select id="gethostmo" resultType="hostmobean">
+	select t.host      "host",
+       t.root_used "root_used",
+       t.data_used "data_used",
+       t.cpu_used  "cpu_used",
+       t.mem_used  "mem_used"
+  from (select * from zb_man.yz_yhbb_messages order by time desc) t
+ where rownum &lt;= 11
+	</select>
+	
+
+
+</mapper>

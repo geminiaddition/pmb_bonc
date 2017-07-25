@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="appser">
+
+
+	<select id="sjfx" resultType="appserbean">
+		select '数据分析系统' as "type",
+		sum(decode(t.kpi_code, 'MC_006', t.kpi_value)) as "mc_006",
+		sum(decode(t.kpi_code, 'MC_007', t.kpi_value)) as "mc_007"
+		from SYSTEM_MONITOR_COUNT t
+
+	</select>
+
+	<select id="ldsy" resultType="appserbean">
+		select '领导首页' as "type",
+		sum(decode(t.kpi_code, 'MC_008', t.kpi_value)) as "mc_008",
+		sum(decode(t.kpi_code, 'MC_009', t.kpi_value)) as "mc_009"
+		from SYSTEM_MONITOR_COUNT t
+
+	</select>
+
+	<select id="llcx" resultType="appserbean">
+		select '流量查询' as "type",
+		sum(decode(t.kpi_code, 'MC_010', t.kpi_value)) as "mc_010",
+		sum(decode(t.kpi_code, 'MC_011', t.kpi_value)) as "mc_011"
+		from SYSTEM_MONITOR_COUNT t
+	</select>
+
+</mapper>  

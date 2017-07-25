@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/dev/base/!svn/ver/94665/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist
+END
+main.js
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/dev/base/!svn/ver/94665/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/main.js
+END
+data.js
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/dev/base/!svn/ver/94665/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/data.js
+END
+echarts.js
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/echarts.js
+END
+echarts-all.js
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/dev/base/!svn/ver/94088/TRUNK/iSpire/TRUNK/bonc-auth-wscreen/src/main/webapp/WEB-INF/resources/plugins/echarts/dist/echarts-all.js
+END

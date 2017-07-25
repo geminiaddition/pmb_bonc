@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<!--指定数据库的返回类bean的全名 -->
+		<typeAlias alias="demobean" type="com.bonc.model.demo.DemoBean" />
+		<typeAlias alias="userbean" type="com.bonc.model.login.UserBean" />
+	
+		<typeAlias alias="afterbean" type="com.bonc.model.qianzhi.AfterBean" />
+		<typeAlias alias="collectbean" type="com.bonc.model.caiji.CollectBean" />
+		<typeAlias alias="collectzxbean" type="com.bonc.model.caiji.CollectzxBean" />
+		<typeAlias alias="workbean" type="com.bonc.model.jiagong.WorkBean" />
+		<typeAlias alias="auditbean" type="com.bonc.model.jihe.AuditBean" />
+		<typeAlias alias="auditdatilbean" type="com.bonc.model.jihe.AuditdatilBean" />
+		
+	
+		<typeAlias alias="datasendbean" type="com.bonc.model.datasend.DatasendBean" />
+		<typeAlias alias="datapushbean" type="com.bonc.model.datapush.DatapushBean" />
+		<typeAlias alias="fouroneninebean" type="com.bonc.model.datacenter.FouronenineBean" />
+		<typeAlias alias="yarmbean" type="com.bonc.model.datacenter.YarmBean" />
+		<typeAlias alias="yarnnbean" type="com.bonc.model.datacenter.YarnBean" />
+		<typeAlias alias="hbasebean" type="com.bonc.model.datacenter.HbaseBean" />
+        <typeAlias alias="threehbasebean" type="com.bonc.model.datacenter.ThreehbaseBean" />
+        <typeAlias alias="threestormbean" type="com.bonc.model.datacenter.ThreestormBean" />
+        <typeAlias alias="threekafkabean" type="com.bonc.model.datacenter.ThreekafkaBean" />
+        <typeAlias alias="threeredisbean" type="com.bonc.model.datacenter.ThreeredisBean" />
+        <typeAlias alias="lsxdbfbean" type="com.bonc.model.datacenter.LsxdbfBean" />
+	    <typeAlias alias="kafkabean" type="com.bonc.model.datacenter.KafkaBean" />
+	    <typeAlias alias="redisbean" type="com.bonc.model.datacenter.RedisBean" />
+	    <typeAlias alias="stormbean" type="com.bonc.model.datacenter.StormBean" />
+	    <typeAlias alias="yybsbean" type="com.bonc.model.datacenter.YybsBean" />
+	    <typeAlias alias="sjjkbean" type="com.bonc.model.datacenter.SjjkBean" />
+	    <typeAlias alias="woyarnbean" type="com.bonc.model.toout.WoyarnBean" />
+	    <typeAlias alias="wokafkabean" type="com.bonc.model.toout.WokafkaBean" />
+	    <typeAlias alias="woredisbean" type="com.bonc.model.toout.WoredisBean" />
+	    <typeAlias alias="ftpbean" type="com.bonc.model.toout.FtpBean" />
+	    <typeAlias alias="mppbean" type="com.bonc.model.toout.MppBean" />
+	    <typeAlias alias="hhhhbasebean" type="com.bonc.model.toout.HbaseBean" />
+	    <typeAlias alias="oracleopenbean" type="com.bonc.model.toout.OracleopenBean" />
+	    <typeAlias alias="forinappbean" type="com.bonc.model.forinapp.ForinappBean" />
+	    <typeAlias alias="todatalinebean" type="com.bonc.model.forinapp.ToindatalineBean" />
+	    <typeAlias alias="todatalinedownbean" type="com.bonc.model.forinapp.TodatalinedownBean" />
+	    <typeAlias alias="todatalinetowbean" type="com.bonc.model.forinapp.TodatalinetowBean" />
+	    <typeAlias alias="underbean" type="com.bonc.model.toout.UnderBean" />
+	    <typeAlias alias="ytotalbean" type="com.bonc.model.datacenter.YtotalBean" />
+	    <typeAlias alias="etotalbean" type="com.bonc.model.datacenter.EtotalBean" />
+	    <typeAlias alias="stotalbean" type="com.bonc.model.datacenter.StotalBean" />
+	     <typeAlias alias="interbean" type="com.bonc.model.qianzhi.InterBean" />
+	    <typeAlias alias="hostmobean" type="com.bonc.model.hostmo.HostmoBean" />
+	</typeAliases>
+	<mappers>
+		<!-- 配置sql语句文件 -->
+		<mapper resource="config/bonc/demo/sqlmap-demo.xml" />
+		<mapper resource="config/bonc/login/sqlmap-user.xml" />
+		
+		<mapper resource="config/bonc/qianzhi/sqlmap-after.xml"/>
+		<mapper resource="config/bonc/caiji/sqlmap-collect.xml"/>
+		<mapper resource="config/bonc/jiagong/sqlmap-work.xml"/>
+		<mapper resource="config/bonc/jihe/sqlmap-audit.xml"/>
+		<mapper resource="config/bonc/forinapp/sqlmap-forinapp.xml" />
+		<mapper resource="config/bonc/hostmo/sqlmap-hostmo.xml" />
+		<mapper resource="config/bonc/datasend/sqlmap-datasend.xml" />
+		<mapper resource="config/bonc/datapush/sqlmap-datapush.xml" />
+		<mapper resource="config/bonc/datacenter/sqlmap-datacenter.xml" />
+		<mapper resource="config/bonc/toout/sqlmap-toout.xml"/>
+	</mappers>
+
+</configuration> 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="datapush">
+
+
+	<select id="datapush" resultType="datapushbean">
+		select b.prov_desc     "prov_desc",
+       a.serv_shl_num1 "serv_shl_num1",
+       a.serv_num1     "serv_num1",
+       a.serv_shl_num2 "serv_shl_num2",
+       a.serv_num2     "serv_num2",
+       a.shl_num       "shl_num",
+       a.put_num       "put_num"
+  from (select * from echarts.v_zb_scyw_serv_cb) a,
+       (select * from zb_man.dim_prov) b
+ where a.prov_id = b.prov_id
+
+	</select>
+	
+
+</mapper>

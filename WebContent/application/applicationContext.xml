@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="    
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd    
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd    
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd    
+       http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd 
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd    
+       ">
+
+	<!-- 采用注释的方式配置bean -->
+	<context:annotation-config />
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- 该 BeanPostProcessor 将自动对标注 @Autowired 的 Bean 进行注入 -->
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+	<!-- 配置要扫描的包 -->
+	<context:component-scan base-package="com.bonc"></context:component-scan>
+
+	<!--引入数据库配置文件 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:jdbc.properties</value>
+		</property>
+	</bean>
+
+	<!-- 配置mybitas SqlSessionFactoryBean -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" /><!-- 此处的ref引用的是数据源配置的id -->
+		<property name="configLocation" value="classpath:sqlmap-config.xml"></property>
+	</bean>
+
+
+	<!-- 事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass">
+			<value>${database.driver}</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>${database.url}</value>
+		</property>
+		<property name="user">
+			<value>${database.username}</value>
+		</property>
+		<property name="password">
+			<value>${database.password}</value>
+		</property>
+		<property name="initialPoolSize">
+			<value>${database.initialPoolSize}</value>
+		</property>
+		<property name="acquireIncrement">
+			<value>${database.acquireIncrement}</value>
+		</property>
+		<property name="minPoolSize">
+			<value>${database.minPoolSize}</value>
+		</property>
+		<property name="maxPoolSize">
+			<value>${database.maxPoolSize}</value>
+		</property>
+		<property name="maxIdleTime">
+			<value>${database.maxIdleTime}</value>
+		</property>
+	</bean>
+
+	<!--使用自动配置bean后，action的bean不用手动配置 -->
+	<!-- <bean id="demoAction" class="com.demo.action.DemoAction" /> -->
+
+	<!--使用自动配置bean后，dao的bean不用手动配置 -->
+	<!-- <bean id="demoDao" class="com.bonc.demo.dao.DemoDao"> <property name="sqlSessionFactory" 
+		ref="sqlSessionFactory" /> </bean> -->
+
+
+
+
+
+
+
+</beans>  

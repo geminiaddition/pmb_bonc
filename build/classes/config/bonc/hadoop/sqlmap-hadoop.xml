@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sqlhadoop">
+	
+
+	<select id="cbss" resultType="hadoopbean">
+		select t.operation "operation",
+       t.total_nodes "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate "mem_rate",
+       t.mem_warn "mem_warn",
+       t.mem_crit "mem_crit",
+       t.cpu_rate "cpu_rate",
+       t.cpu_warn "cpu_warn",
+       t.cpu_crit "cpu_crit",
+       t.active_nodes "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = 'cBSS云化迁移'
+
+	</select>
+	
+	<select id="zxjg" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '纵向加工'
+	</select>
+	
+	<select id="ythjq" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '一体化集群'
+	</select>
+	
+	<select id="clpt" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '存量平台'
+	</select>
+	
+	<select id="dwfw" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '对外服务'
+	
+	</select>
+	
+	
+	<select id="nlkfptyz" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '能力开放平台(亦庄)'
+	</select>
+	
+	
+	<select id="ipsyjq" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = 'IP溯源集群'
+	</select>
+	
+	
+	<select id="xlxdjq" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '信令西电集群'
+	</select>
+	
+	
+	<select id="nlkfpt" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '能力开放平台'
+	
+	</select>
+	
+	
+	<select id="jzyx" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '精准营销'
+	</select>
+	
+	<select id="gwjq" resultType="hadoopbean">
+	select t.operation     "operation",
+       t.total_nodes   "total_nodes",
+       t.storage_total "storage_total",
+       t.mem_rate      "mem_rate",
+       t.mem_warn      "mem_warn",
+       t.mem_crit      "mem_crit",
+       t.cpu_rate      "cpu_rate",
+       t.cpu_warn      "cpu_warn",
+       t.cpu_crit      "cpu_crit",
+       t.active_nodes  "active_nodes"
+  from PLAT_HADOOP_DETAIL t 
+ where t.operation = '固网集群'
+	</select>
+	
+</mapper>  

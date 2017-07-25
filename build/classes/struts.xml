@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 单独使用struts2的配置 -->
+	<!-- <package name="demo" extends="struts-default"> 单独使用struts2,url访问的地址后action的名为action标签的name，即demo.action 
+		<action name="demo" class="com.demo.action.DemoAction"> <result name="success">/pages/demo/demo.jsp</result> 
+		</action> </package> -->
+
+
+
+	<!--struts2+spring -->
+	<!-- <package name="demo" extends="struts-default"> 此处action的name属性为spring配置文件中bean的id 
+		<action name="demoAction" class="com.demo.action.DemoAction"> <result name="demoo">/WEB-INF/pages/demo/demo-demoo.jsp</result> 
+		</action> </package> -->
+
+	<!-- action的通配 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<!-- 是否显示详细错误信息 -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!--设置Convention插件定位视图资源的根路径，默认为/WEB-INF/pages/ -->
+	<constant name="struts.convention.result.path" value="/WEB-INF/pages/" />
+	<!--设置映射Action时指定name属性值各单词之间的分隔符。默认值为中画线（“-”） -->
+	<constant name="struts.convention.action.name.separator"
+		value="-" />
+	<!--Convention搜索Action类的类名后缀，默认为Action -->
+	<constant name="struts.convention.action.suffix" value="Action" />
+	<!-- Action扩展名 -->
+	<constant name="struts.action.extension" value="action" />
+<!-- 	<constant name="struts.convention.default.parent.package"
+		value="bonc-default" /> -->
+	<!--默认包路径包含action的所有包都会被struts作为含有Action类的路径来搜索 -->
+	<constant name="struts.convention.package.locators" value="action" />
+	<!--设置即使没有@Action注释，是否依然创建Action映射。默认值为false -->
+	<constant name="struts.convention.action.mapAllMatches" value="true" />
+
+
+	<!--指定Convention映射的Result时默认支持的结果类型。默认值为dispatcher,freemarker -->
+	<constant name="struts.convention.relative.result.types"
+		value="dispatcher,freemarker" />
+
+	<!--设置映射Action时，是否将Action的name属性值转换为所有字母小写，默认值是true -->
+	<constant name="struts.convention.action.name.lowercase"
+		value="true" />
+
+
+<!-- 	<package name="bonc-default" namespace="/" extends="struts-default">
+		定义一个拦截器
+		<interceptors>
+			权限拦截器 <interceptor name="authority" class="com.smartsoft.interceptor.AuthorityIterceptor"> 
+				</interceptor>
+			session拦截器
+			<interceptor name="sessionout"
+				class="com.bonc.filter.SessionIterceptor"></interceptor>
+			拦截器栈
+			<interceptor-stack name="mystack">
+				<interceptor-ref name="defaultStack" />
+				权限拦截 <interceptor-ref name="authority" />
+				session拦截
+				<interceptor-ref name="sessionout" />
+			</interceptor-stack>
+		</interceptors>
+
+		定义全局Result
+		<global-results>
+			当返回login视图名时，转入/login.jsp页面
+			<result name="toLogin">/WEB-INF/pages/login/login-login.jsp</result>
+		</global-results>
+	</package> -->
+
+
+
+<package name="loginforword" extends="struts-default" >    
+        <action name="tologin" class="com.bonc.action.login.TologinAction">  
+            <result name="success">/WEB-INF/pages/login/login-login.jsp</result>  
+        </action>   
+          
+    </package>  
+
+
+
+
+</struts>  

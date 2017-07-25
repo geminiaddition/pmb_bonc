@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="afterinfo">
+
+	<select id="inter" resultType="interbean">
+select t.host "host",
+       t.projects "projects",
+       t.cpu_used "cpu_used",
+       t.cpu_war "cpu_war",
+       t.cpu_cri "cpu_cri",
+       t.mem_used "mem_used",
+       t.mem_war "mem_war",
+       t.mem_cri "mem_cri",
+       t.root_used_rate "root_used_rate",
+       t.ping_stat "ping_stat"
+  from (select *
+          from zb_man.cpu_messages
+         where projects in ('纵向卸载（详单）',
+                            'O域准实时服务',
+                            '纵向采集/横向采集',
+                            '纵向采集/横向采集/旅游',
+                            '流量查询（廊坊）',
+                            '智能语音',
+                            'cb实时详单',
+                            '集中渠道',
+                            'cb明细下发',
+                            '指标',
+                            '数据下发',
+                            '网间结算/漫游结算',
+                            'IP溯源（廊坊）',
+                            '反欺诈',
+                            'cBSS日报加工',
+                            '信令',
+                            '综采/矿砂',
+                            '存量平台',
+                            '智能语音（廊坊）'
+                            
+                            )
+         order by time desc) t
+ where rownum &lt;= 101
+ order by projects desc
+	</select>
+	<select id="msg" resultType="afterbean">
+
+		select
+		decode(index_name,'短信预警省分数','省分数','短信预警升级到副总省分数','升级到副总省分数','短信预警升级到副总省分','升级到副总省分')
+		as index_name,index_value from echarts.zb_dpm_index_data_01 t where
+		t.index_id in('P010501','P010502','P010503')
+
+	</select>
+
+	<select id="etl" resultType="afterbean">
+
+		select index_name,index_value from echarts.zb_dpm_index_data_01 t where
+		t.index_id in ('P010201','P010202')
+	</select>
+	<select id="code" resultType="afterbean">
+
+		select index_name,index_value from echarts.zb_dpm_index_data_01 t where
+		t.index_id in ('P010301','P010302')
+	</select>
+	<select id="late" resultType="afterbean">
+
+		select index_name,index_value from echarts.zb_dpm_index_data_01 t where
+		t.index_id in ('P010401','P010402')
+	</select>
+
+
+
+
+</mapper>  

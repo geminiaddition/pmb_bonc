@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="toout">
+	<select id="getyarn" resultType="woyarnbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.woyx_324_yarn t
+	</select>
+	<select id="getkafka" resultType="wokafkabean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.ss_network "ss_network",
+		t.storage_total_rate "storage_total_rate",
+		t.storage_total_warn
+		"storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+
+		from
+		LTZB.woyx_324_kafka t
+	</select>
+	<select id="getredismysql" resultType="woredisbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.proxy_num "proxy_num",
+		t.group_num "group_num",
+		t.dashboard "dashboard",
+		t.storage_total_rate
+		"storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+
+		from LTZB.woyx_419_redismysql
+		t
+	</select>
+	<select id="getredis" resultType="woredisbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.proxy_num "proxy_num",
+		t.group_num "group_num",
+		t.dashboard "dashboard",
+		t.storage_total_rate
+		"storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+
+		from LTZB.woyx_301_redis t
+	</select>
+	<select id="getdmpyarn" resultType="woyarnbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.dmp_yarn t
+	</select>
+	<select id="getdmpkafka" resultType="wokafkabean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.ss_network "ss_network",
+		t.storage_total_rate "storage_total_rate",
+		t.storage_total_warn
+		"storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+		from
+		LTZB.dmp_kafka t
+	</select>
+	<select id="getdmpftp" resultType="ftpbean">
+		select t.total_nodes
+		"total_nodes",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit
+		"mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit
+		"cpu_crit",
+		t.active_nodes "active_nodes",
+		t.pc_load "pc_load"
+		from
+		LTZB.DMP_ftp t
+	</select>
+	<select id="getpoweroneyarn" resultType="woyarnbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.open_301_yarn t
+	</select>
+	<select id="getpowerfouryarn" resultType="woyarnbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.job_num "job_num",
+		t.queue_info "queue_info",
+		t.file_num "file_num",
+		t.file_num_warn "file_num_warn",
+		t.file_num_crit
+		"file_num_crit"
+		from LTZB.open_324_yarn t
+	</select>
+	<select id="getmpp" resultType="mppbean">
+		select t.total_nodes
+		"total_nodes",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit
+		"mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit
+		"cpu_crit",
+		t.active_nodes "active_nodes"
+
+		from LTZB.open_419_mpp t
+	</select>
+	<select id="getpowerftp" resultType="ftpbean">
+		select t.total_nodes
+		"total_nodes",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit
+		"mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit
+		"cpu_crit",
+		t.active_nodes "active_nodes",
+		t.pc_load "pc_load"
+		from
+		LTZB.open_419_ftp t
+	</select>
+	<select id="getzxonehbase" resultType="hhhhbasebean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate "storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.zx_301_hbase t
+	</select>
+	<select id="getzxfourhbase" resultType="hhhhbasebean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate "storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.zx_324_hbase t
+	</select>
+	<select id="getkshbase" resultType="hhhhbasebean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate "storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.ks_324_hbase t
+	</select>
+	<select id="getksredis" resultType="woredisbean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.proxy_num "proxy_num",
+		t.group_num "group_num",
+		t.dashboard "dashboard",
+		t.storage_total_rate
+		"storage_total_rate",
+		t.storage_total_warn "storage_total_warn",
+		t.storage_total_crit "storage_total_crit"
+
+		from LTZB.ks_419_redis t
+	</select>
+	<select id="getwoowhbase" resultType="hhhhbasebean">
+		select t.total_nodes
+		"total_nodes",
+		t.storage_total "storage_total",
+		t.mem_rate "mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate "cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.active_nodes
+		"active_nodes",
+		t.region_num "region_num",
+		t.requst_num "requst_num",
+		t.storage_rate "storage_rate",
+		t.storage_rate_warn "storage_rate_warn",
+		t.storage_rate_crit "storage_rate_crit"
+		from LTZB.wowz_324_hbase t
+	</select>
+	<select id="getoracleone" resultType="oracleopenbean">
+		select t.mem_rate
+		"mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate
+		"cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation = 'odba1'
+	</select>
+	<select id="getoracletwo" resultType="oracleopenbean">
+		select t.mem_rate
+		"mem_rate",
+		t.mem_warn "mem_warn",
+		t.mem_crit "mem_crit",
+		t.cpu_rate
+		"cpu_rate",
+		t.cpu_warn "cpu_warn",
+		t.cpu_crit "cpu_crit",
+		t.session_num
+		"session_num",
+		t.net_status "net_status"
+		from LTZB.oracle_data t
+		where
+		t.operation = 'odba2'
+	</select>
+	<select id="gettooutwoyarn" resultType="yarnnbean">
+		select t.scheduler_id
+		"scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity "absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = '精准营销'
+		order by t.scheduler_id
+
+	</select>
+	<select id="gettooutdmpyarn" resultType="yarnnbean">
+		select t.scheduler_id
+		"scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity "absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = 'O域集群'
+		order by t.scheduler_id
+
+	</select>
+	<select id="gettooutthreeooneyarn" resultType="yarnnbean">
+		select
+		t.scheduler_id "scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity
+		"absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = '亦庄能力开放'
+		order by t.scheduler_id
+
+	</select>
+	<select id="gettooutthreetfouryarn" resultType="yarnnbean">
+		select
+		t.scheduler_id "scheduler_id",
+		t.userd "userd",
+		t.absolute_capacity
+		"absolute_capacity"
+		from ltzb.YARN_status t
+		where t.name = '廊坊能力开放'
+		order by t.scheduler_id
+
+	</select>
+	<select id="zxline" resultType="todatalinebean">
+		select to_number(substr(time, 7,
+		8))
+		as "kpi_date", count_num "kpi_value"
+		from( select * from (select * from (select distinct time, count_num from
+		ltzb.zx_in_out_count order by time desc)
+		where rownum &lt; =7 ) order by time)
+	</select>
+	<select id="woline" resultType="todatalinebean">
+		select substr(time, 7, 8)||'日' as "kpi_date", count_num as "kpi_value"
+    from( select * from (select *
+            from (select time, count_num
+                    from ltzb.view_PURE_LOG_ENTER 
+                   order by time desc)
+           where rownum &lt;= 7) order by time)
+	</select>
+	<select id="jingzhun_wo" resultType="underbean">
+		select max(cpu_used)
+		"cpu_used",
+		avg(mem_used) "mem_used",
+		ping_stat "ping_stat",
+		max(root_used_rate) "root_used_rate"
+		from (select *
+		from (select *
+		from
+		zb_man.cpu_messages
+		where projects in ('精准营销')
+		order by time desc)
+		where
+		rownum &lt;= 5
+		order by projects desc)
+		group by ping_stat
+	</select>
+	<select id="zhengxin_xia" resultType="underbean">
+		select max(cpu_used)
+		"cpu_used",
+		round(avg(mem_used)) "mem_used",
+		ping_stat "ping_stat",
+		max(root_used_rate) "root_used_rate"
+		from (select *
+		from (select *
+		from
+		zb_man.cpu_messages
+		where projects in ('征信')
+		order by time desc)
+		where
+		rownum &lt;= 24
+		order by projects desc)
+		group by ping_stat
+	</select>
+	<select id="zhengxininner" resultType="interbean">
+		select t.host "host",
+		t.projects "projects",
+		t.cpu_used "cpu_used",
+		t.cpu_war "cpu_war",
+		t.cpu_cri "cpu_cri",
+		t.mem_used "mem_used",
+		t.mem_war "mem_war",
+		t.mem_cri "mem_cri",
+		t.root_used_rate "root_used_rate",
+		t.ping_stat
+		"ping_stat"
+		from (select *
+		from zb_man.cpu_messages
+		where projects in
+		('征信')
+		order by time desc) t
+		where rownum &lt;= 24
+		order by projects desc
+	</select>
+	<select id="jzyxinner" resultType="interbean">
+		select t.host "host",
+		t.projects "projects",
+		t.cpu_used "cpu_used",
+		t.cpu_war "cpu_war",
+		t.cpu_cri "cpu_cri",
+		t.mem_used "mem_used",
+		t.mem_war "mem_war",
+		t.mem_cri "mem_cri",
+		t.root_used_rate "root_used_rate",
+		t.ping_stat
+		"ping_stat"
+		from (select *
+		from zb_man.cpu_messages
+		where projects in
+		('精准营销')
+		order by time desc) t
+		where rownum &lt;= 5
+		order by projects
+		desc
+	</select>
+
+</mapper>

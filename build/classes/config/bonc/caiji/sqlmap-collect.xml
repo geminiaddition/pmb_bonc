@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="collectinfo">
+
+
+	<select id="cb_collect" resultType="collectbean">
+
+		select interface_type "interface_type",
+		file_date "file_date",
+		sum(all_num) "all_num",
+		sum(imp_num) "imp_num",
+		sum(latenum) "latenum",
+		sum(ver_no) "ver_no"
+		from echarts.v_zb_scyw_imp_cbss
+		group by interface_type, file_date
+
+	</select>
+	<select id="zx_collect" resultType="collectzxbean">
+
+		select '20' || filedate "filedate",
+		prov_desc "prov_desc",
+		totals "totals",
+		sumup "sumup",
+		sumimp "sumimp",
+		sumlate "sumlate",
+		sumtrantimes "sumtrantimes"
+		from echarts.v_zb_scyw_imp_portrait
+
+	</select>
+
+
+
+
+
+
+
+</mapper>  

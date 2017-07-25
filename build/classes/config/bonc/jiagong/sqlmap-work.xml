@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="workinfo">
+
+
+	<select id="cb_jiagong" resultType="workbean">
+		
+select  prov_desc "prov_desc",
+totals "totals",
+succnum "succnum",
+failnum "failnum",
+procingNum "procingNum"
+ from echarts.v_zb_scyw_pro_cbss
+
+	</select>
+	<select id="hx_jiagong" resultType="workbean">
+		
+select  t.PROV_DESC "prov_desc",
+t.totals "totals",
+t.succNum  "succnum",
+t.failNum   "failnum",
+t.procingNum  "procingNum"
+ from echarts.v_zb_scyw_pro_hx t
+
+	</select>
+	<select id="xkj_jiagong" resultType="workbean">
+		
+select  t.PROV_DESC "prov_desc",
+t.totals "totals",
+t.succNum  "succnum",
+t.failNum   "failnum",
+t.procingNum  "procingNum"
+ from echarts.v_zb_scyw_pro_nm t
+
+
+	</select>
+	<select id="zc_jiagong" resultType="workbean">
+select  t.PROV_DESC "prov_desc",
+t.totals "totals",
+t.succNum  "succnum",
+t.failNum   "failnum",
+t.procingNum  "procingNum"
+ from echarts.v_zb_scyw_pro_zc t
+
+	</select>
+	<select id="zx_jiagong" resultType="workbean">
+select  t.PROV_DESC "prov_desc",
+t.totals "totals",
+t.succNum  "succnum",
+t.failNum   "failnum",
+t.procingNum  "procingNum"
+ from echarts.v_zb_scyw_pro_zx t
+
+	</select>
+	<select id="oy_jiagong" resultType="workbean">
+select  t.PROV_DESC "prov_desc",
+t.totals "totals",
+t.succNum  "succnum",
+t.failNum   "failnum",
+t.procingNum  "procingNum"
+ from echarts.v_zb_scyw_pro_oy t
+
+	</select>
+	
+	
+
+
+
+
+</mapper>  
